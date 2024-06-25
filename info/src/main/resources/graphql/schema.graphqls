@@ -1,0 +1,26 @@
+type Query {
+	getUserById(id : ID!) : UserDetailsResponse
+	getAllUser : [User]
+	getAllUsersAndUserDetails : [UserDetailsResponse]
+}
+
+type User {
+	id:ID!
+	userName:String
+	password:String
+}
+
+type UserDetails {
+	id:ID!
+	name:String
+	emailId:String
+	dob:String
+	mobile:String
+	address:String
+	userId:ID!
+}
+
+type UserDetailsResponse {
+	user : User
+	userDetails : UserDetails
+}
